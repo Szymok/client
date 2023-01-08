@@ -2,7 +2,7 @@ import fetcher from './fetcher';
 import { Post } from '../types'
 
 async function getPosts () {
-    return fetcher.get<Post[]>('/v1/posts');
+    return (await fetcher.get<Post[]>('/v1/posts')).data;
   }
   
   
